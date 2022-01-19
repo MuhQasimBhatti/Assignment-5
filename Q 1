@@ -1,0 +1,38 @@
+//Write a program that takes a string of characters (in character array) from the user (assuming there are no white spaces entered) and then tells the user if the string entered is a palindrome or not.
+Like aba, aabbaa is a palandrom, aab, babaa is not a palendrom.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char A[200];
+	cout << "Enter a palindrom word" << endl;
+	cin.getline(A, 200);
+
+
+	int i = 0;
+	int j = 0;
+	while (A[i] != 0)
+		i++;
+	i--;
+
+	bool Q = true;
+
+	while (j < i)
+	{
+	if (A[i] == A[j])
+		{	
+			i--;
+			j++;
+		}
+	else
+		{
+		Q = false;
+			break;
+		}
+	}
+	if( Q==true)
+		cout << "Palindrom" << endl;
+	else
+		cout << "Not palindrom" << endl;
+} 
