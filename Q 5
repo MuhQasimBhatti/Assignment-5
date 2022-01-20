@@ -1,0 +1,22 @@
+//Q5: Write a program that takes a string of characters (in character array) from the user (including white spaces) and then counts total no. of words in array. 
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char A[200];
+
+	cout << "Enter a sentence" << endl;
+	cin.getline(A, 200);
+	cout << A << endl;
+  	
+  int i=0;
+	int a=0;
+	while (A[i] != '\0')
+	{
+		if (A[i] == 32 && A[i - 1] != 32)
+			a++;
+		i++;
+	}
+	cout << "No. of words are " << a + 1 << endl;
+}
