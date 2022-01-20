@@ -1,0 +1,17 @@
+//Q10: Write a program that reads a character and an integer n from user and prints entered character n times.
+// printing a character n times.cpp 
+
+#include<iostream>
+using namespace std;
+int main() {
+	char a;
+	int i;
+	cout << "Enter character" << endl;
+	cin >> a;
+	cout << "How many time it should display?"<< endl;
+	cin >> i;
+	
+	for (int x = 1; x <= i; x++)
+		cout << a << endl;
+
+}
