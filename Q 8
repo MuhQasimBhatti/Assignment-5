@@ -1,0 +1,21 @@
+//Q8: Write a program that takes a string of characters (in character array) from the user (assuming there are no white spaces entered) and then sort the array in descending or ascending order.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char a[200];
+	cout << "Enter a sentence" << endl;
+	cin.getline(a, 200);
+	cout << endl;
+  cout<<"In ascending order"<<endl;
+	cout << a << endl;
+
+  cout<<"In descending order<<endl;
+	int i = 0;
+	while (a[i] != 0)
+		i++;
+	i--;
+  for (; i >= 0; i--)
+		cout << a[i];
+}
