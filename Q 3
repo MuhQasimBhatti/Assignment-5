@@ -1,0 +1,28 @@
+//Q3: Write a program that takes a string of characters (in character array) from the user (including white spaces) and then asks a single character from user. You have to count how many times that single character appears in array.
+// Checking letter repitition.cpp
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char c[2000];
+	cout << "Enter the text" << endl;
+	cin.getline(c, 2000);
+	char b;
+	cout << "Enter the letter" << endl;
+	cin >> b;
+
+	int a = 0;
+	int x = 0;
+	while (c[a] != 0)
+		a++;
+
+	for(int i=0;i<a;i++)
+		{
+			if (c[i] == b)
+				x++;
+		}
+
+	cout << x;
+}
