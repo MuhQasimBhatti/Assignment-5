@@ -10,7 +10,7 @@ int main()
 	char A[200];
 
 	cout << "Enter a sentence" << endl;
-	cin.getline(A, 200);
+	cin>>a;
   int q = 0;
 	while (A[q] != '\0')
 		q++;
