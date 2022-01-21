@@ -2,16 +2,11 @@
 
 #include<iostream>
 using namespace std;
-int main()
-{
-	char A[200];
 
-	cout << "Enter a sentence" << endl;
-	cin.getline(A, 200);
-	cout << A << endl;
-  	
-  int i=0;
-	int a=0;
+void fnc(char A[], int x)
+{
+	int i = 0;
+	int a = 0;
 	while (A[i] != '\0')
 	{
 		if (A[i] == 32 && A[i - 1] != 32)
@@ -19,4 +14,15 @@ int main()
 		i++;
 	}
 	cout << "No. of words are " << a + 1 << endl;
+}
+
+int main()
+{
+	char A[200];
+
+	cout << "Enter a sentence" << endl;
+	cin.getline(A, 200);
+	cout << A << endl;
+
+	fnc(A, 200);
 }
