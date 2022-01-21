@@ -4,31 +4,37 @@
 // Checking contiguous doubles.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+//Q 2
 #include <iostream>
 using namespace std;
 
-int main()
+int fnc(char a[], int x)
 {
-	char a[200];
-	cout << "Enter the text" << endl;
-	cin.getline(a, 200);
-	
 	int i = 0;
 	int j = 0;
 	int c = 0;
 
-	while (a[i] !='\0')
+	while (a[i] != '\0')
 	{
 		i++;
 	}
 
 	while (j < i)
 	{
-		if (a[j] == a[j + 1] && a[j] != a[j + 2]&&a[j]!=a[j-1])
-		{	
+		if (a[j] == a[j + 1] && a[j] != a[j + 2] && a[j] != a[j - 1])
+		{
 			c++;
 		}
-			j++;
+		j++;
 	}
-	cout << c;
+	return c;
+}
+
+int main()
+{
+	char a[200];
+	cout << "Enter the text" << endl;
+	cin.getline(a, 200);
+
+	cout << fnc(a,200);
 }
