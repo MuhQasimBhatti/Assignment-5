@@ -3,15 +3,22 @@
 
 #include<iostream>
 using namespace std;
-int main() {
+
+void fnc(char a,int i)
+{
+	for (int x = 1; x <= i; x++)
+		cout << a << endl;
+}
+
+int main() 
+{
 	char a;
 	int i;
 	cout << "Enter character" << endl;
 	cin >> a;
-	cout << "How many time it should display?"<< endl;
+	cout << "How many time it should display?" << endl;
 	cin >> i;
-	
-	for (int x = 1; x <= i; x++)
-		cout << a << endl;
+
+	fnc(a, i);
 
 }
