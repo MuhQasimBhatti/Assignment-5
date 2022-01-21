@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int fnc()
 {
 	char a[200];
 	int x = 0;
@@ -22,6 +22,12 @@ int main()
 		}
 		i++;
 	}
-	cout << x << endl;
+	return x;
+}
+
+int main()
+{
+	
+	cout<<fnc();
 
 }
