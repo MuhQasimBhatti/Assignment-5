@@ -5,14 +5,23 @@ Output:9*/
 
 #include<iostream>
 using namespace std;
-int main()
-{
-	char A[200];
 
-	cout << "Enter a sentence" << endl;
-	cin>>a;
-  int q = 0;
+void fnc(char A[], int i)
+{
+
+	int q = 0;
 	while (A[q] != '\0')
 		q++;
-	cout << "No. of letters in the sentence are " << q << endl;
+	cout << "No. of letters in the word are " << q << endl;
+
+}
+
+int main()
+{
+	char a[200];
+
+	cout << "Enter a word" << endl;
+	cin >> a;
+
+	fnc(a, 200);
 }
