@@ -1,0 +1,50 @@
+// tracing the letter appeared max time.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+void fnc(char a[], int i)
+{
+
+	int c = 0;
+	int b = 0;
+	char ch;
+
+	for (int z = 0; z < i; z++)
+	{
+		for (int y = z; y < i; y++)
+		{
+			if (a[z] == a[y])
+				b++;
+
+
+			if (b > c)
+			{
+				c = b;
+				ch = a[z];
+			}
+		}
+		b = 0;
+	}
+
+	cout << ch << " is repeated " << c << " times" << endl;
+}
+
+int main()
+{
+	char a[200];
+	int i = 0;
+	
+
+	cout << "Enter the text" << endl;
+	cin.getline(a, 200);
+
+	while (a[i] != 0)
+		i++;
+
+	fnc(a,i);
+}
+
+
+
